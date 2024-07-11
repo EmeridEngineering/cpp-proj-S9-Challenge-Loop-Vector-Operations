@@ -70,6 +70,20 @@ int main() {
     // the do-while loop should end when q or Q is received (it shall continue when input != q && != Q)
     // switch case would be good to asses the selection, lower and upper letters should have the same behavior, then break;
     // default option shall display "Unknown selection, please try again"
+    char prompt {};
+    do {
+        std::cout << "---------------------" << std::endl
+            << "Command list: " << std::endl
+            << "P - Print numbers" << std::endl
+            << "A - Add a number" << std::endl
+            << "M - Display mean of the numbers" << std::endl
+            << "S - Display the smallest number" << std::endl
+            << "L - Display the largest number" << std::endl
+            << "Q - Quit" << std::endl
+            << "\nSelect a command: ";
+        std::cin >> prompt;
+
+    } while (prompt != 'q' and prompt != 'Q');
 
     // case p or P - print
     // if list != empty then do the logic
