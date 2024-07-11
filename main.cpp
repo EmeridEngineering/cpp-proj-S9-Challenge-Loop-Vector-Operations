@@ -63,13 +63,11 @@ Good luck!
 
 */
 #include <iostream>
+#include <vector>
 
 int main() {
-
-    // Start with do-while loop displaying the command query to the user
-    // the do-while loop should end when q or Q is received (it shall continue when input != q && != Q)
-    // switch case would be good to asses the selection, lower and upper letters should have the same behavior, then break;
-    // default option shall display "Unknown selection, please try again"
+    
+    std::vector<int> list {};
     char prompt {};
     do {
         std::cout << "---------------------" << std::endl
