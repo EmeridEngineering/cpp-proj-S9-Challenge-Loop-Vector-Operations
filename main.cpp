@@ -84,12 +84,13 @@ int main() {
         switch (prompt){
             case 'p': //intentional to achieve p OR P
             case 'P':
-                std::cout << "p" << std::endl;
                 // case p or P - print
-                // if list != empty then do the logic
-                // display square bracket at the begining and the end
-                // use range-base for loop to iterate through list elements and display them separated by spaces
-                // else display the message
+                if (list.empty() != true){
+                    std::cout << "Test" << std::endl;
+                    // display square bracket at the begining and the end
+                    // use range-base for loop to iterate through list elements and display them separated by spaces
+                } else
+                    std::cout << "[] - the list is empty" << std::endl;
                 break;
             case 'a': 
             case 'A':
