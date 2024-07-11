@@ -83,39 +83,62 @@ int main() {
             << "\nSelect a command: ";
         std::cin >> prompt;
 
+        switch (prompt){
+            case 'p': //intentional to achieve p OR P
+            case 'P':
+                std::cout << "p" << std::endl;
+                // case p or P - print
+                // if list != empty then do the logic
+                // display square bracket at the begining and the end
+                // use range-base for loop to iterate through list elements and display them separated by spaces
+                // else display the message
+                break;
+            case 'a': 
+            case 'A':
+                std::cout << "a" << std::endl;
+                // case a or A - add
+                // declare the int variable and prompt the user for a number
+                // read the consol input to the variable
+                // pushback() the new number to the list
+                // Display the message
+                break;
+            case 'm': 
+            case 'M':
+                std::cout << "m" << std::endl;
+                // case m or M - mean
+                // if list != empty then do the logic
+                // declare floating point running sume and average
+                // use range-based for to get the running sum of the list (double) and then dive by the size() (size_t) of the list - will return (double)
+                // else display the message
+                break;
+            case 's': 
+            case 'S':
+                std::cout << "s" << std::endl;
+                // case s or S - smallest
+                // if list != empty then do the logic
+                // either use conditional operator to get smaller number while iterating range-base for loop
+                    // or use predefined method 
+                // Display the smallest number
+                // else display the message
+                break;
+            case 'l': 
+            case 'L':
+                std::cout << "l" << std::endl;
+                // case l or L - largest
+                // Similar to above
+                break;
+            case 'q': 
+            case 'Q':
+                std::cout << "q" << std::endl;
+                // case q or Q - quit
+                // display message
+                break;
+            default:
+                std::cout << "Unknown selection, please try again" << std::endl;
+        }
+
     } while (prompt != 'q' and prompt != 'Q');
-
-    // case p or P - print
-    // if list != empty then do the logic
-    // display square bracket at the begining and the end
-    // use range-base for loop to iterate through list elements and display them separated by spaces
-    // else display the message
-
-    // case a or A - add
-    // declare the int variable and prompt the user for a number
-    // read the consol input to the variable
-    // pushback() the new number to the list
-    // Display the message
-      
-    // case m or M - mean
-    // if list != empty then do the logic
-    // declare floating point running sume and average
-    // use range-based for to get the running sum of the list (double) and then dive by the size() (size_t) of the list - will return (double)
-    // else display the message
-
-    // case s or S - smallest
-    // if list != empty then do the logic
-    // either use conditional operator to get smaller number while iterating range-base for loop
-        // or use predefined method 
-    // Display the smallest number
-    // else display the message
-
-    // case l or L - largest
-    // Similar to above
-
-    // case q or Q - quit
-    // display message
     
-    std::cout << "Default Template." << std::endl;
+    std::cout << std::endl;
     return 0;
 }
