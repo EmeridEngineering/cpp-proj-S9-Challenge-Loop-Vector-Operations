@@ -94,14 +94,15 @@ int main() {
                     std::cout << "[] - the list is empty" << std::endl;
                 break;
             case 'a': 
-            case 'A':
-                std::cout << "a" << std::endl;
+            case 'A':{ //brackets needed to declare the scope for the number variable    
                 // case a or A - add
-                // declare the int variable and prompt the user for a number
-                // read the consol input to the variable
-                // pushback() the new number to the list
-                // Display the message
+                std::cout << "Provide a number: ";
+                int number {};
+                std::cin >> number;
+                // list.push_back(number);
+                std::cout << number << " added" << std::endl;
                 break;
+            } 
             case 'm': 
             case 'M':
                 std::cout << "m" << std::endl;
