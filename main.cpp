@@ -86,9 +86,10 @@ int main() {
             case 'P':
                 // case p or P - print
                 if (list.empty() != true){
-                    std::cout << "Test" << std::endl;
-                    // display square bracket at the begining and the end
-                    // use range-base for loop to iterate through list elements and display them separated by spaces
+                    std::cout << "[ ";
+                    for (auto element: list)
+                        std::cout << element << " ";
+                    std::cout << "]" << std::endl;
                 } else
                     std::cout << "[] - the list is empty" << std::endl;
                 break;
