@@ -104,14 +104,16 @@ int main() {
                 break;
             } 
             case 'm': 
-            case 'M':
-                std::cout << "m" << std::endl;
+            case 'M':{
                 // case m or M - mean
-                // if list != empty then do the logic
-                // declare floating point running sume and average
+                // double running_sum {}, average{};
+                if (!list.empty()){
+                    std::cout << "m" << std::endl;
+                } else
+                    std::cout << "Unable to calculate the mean - no data" << std::endl;
                 // use range-based for to get the running sum of the list (double) and then dive by the size() (size_t) of the list - will return (double)
-                // else display the message
                 break;
+            }
             case 's': 
             case 'S':
                 std::cout << "s" << std::endl;
