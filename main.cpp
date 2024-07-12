@@ -64,6 +64,7 @@ Good luck!
 */
 #include <iostream>
 #include <vector>
+#include <iomanip>
 
 int main() {
     
@@ -111,6 +112,7 @@ int main() {
                     for (auto element: list)
                         running_sum += element;
                     mean = running_sum / list.size(); // (double) / (int) = (double)
+                    // std::cout << std::fixed << std::setprecision(2); //Optional to set the precion of the output
                     std::cout << mean << std::endl;
                 } else
                     std::cout << "Unable to calculate the mean - no data" << std::endl;
