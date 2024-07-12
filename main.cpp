@@ -117,10 +117,15 @@ int main() {
             case 'S':{
                 // case s or S - smallest
                 int smallest {INT_MAX};
+                int index {};
                 if (!list.empty()){
-                    for (auto element: list)
+                    int i {};
+                    for (auto element: list){
+                        index = (element < smallest)?i:index; // if element is smaller then assign new index else keep the old one
                         smallest = (element < smallest)?element:smallest;
-                    std::cout << smallest << std::endl;
+                        ++i;
+                    }
+                    std::cout << smallest << " at [" << index << "]" << std::endl;
                 } else
                     std::cout << "Unable to determine the smallest number - list is empty" << std::endl;
                 break;
