@@ -114,13 +114,14 @@ int main() {
                 break;
             case 's': 
             case 'S':
-                std::cout << "s" << std::endl;
                 // case s or S - smallest
-                // if list != empty then do the logic
+                if (!list.empty()){
+                    std::cout << "s" << std::endl;
+                } else
+                    std::cout << "Unable to determine the smallest number - list is empty" << std::endl;
                 // either use conditional operator to get smaller number while iterating range-base for loop
                     // or use predefined method 
                 // Display the smallest number
-                // else display the message
                 break;
             case 'l': 
             case 'L':
