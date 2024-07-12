@@ -140,11 +140,13 @@ int main() {
             case 'L':
                 // case l or L - largest
                 if (!list.empty()){
-                    int largest {};
+                    int largest {}, index {}, i{};
                     for (auto element: list){
+                        index = (element > largest)?i:index;
                         largest = (element > largest)?element:largest;
+                        ++i;
                     }
-                    std::cout << largest << std::endl;
+                    std::cout << largest << " at [" << index << "]" << std::endl;
                 } else
                     std::cout << "Unable to determine the largest number - list is empty" << std::endl;
                 break;
