@@ -99,7 +99,7 @@ int main() {
                 std::cout << "Provide a number: ";
                 int number {};
                 std::cin >> number;
-                // list.push_back(number);
+                list.push_back(number);
                 std::cout << number << " added" << std::endl;
                 break;
             } 
