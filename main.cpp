@@ -106,12 +106,14 @@ int main() {
             case 'm': 
             case 'M':{
                 // case m or M - mean
-                // double running_sum {}, average{};
+                double running_sum {}, mean{};
                 if (!list.empty()){
-                    std::cout << "m" << std::endl;
+                    for (auto element: list)
+                        running_sum += element;
+                    mean = running_sum / list.size(); // (double) / (int) = (double)
+                    std::cout << mean << std::endl;
                 } else
                     std::cout << "Unable to calculate the mean - no data" << std::endl;
-                // use range-based for to get the running sum of the list (double) and then dive by the size() (size_t) of the list - will return (double)
                 break;
             }
             case 's': 
