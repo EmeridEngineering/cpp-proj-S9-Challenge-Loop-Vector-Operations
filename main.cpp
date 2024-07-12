@@ -65,6 +65,7 @@ Good luck!
 #include <iostream>
 #include <vector>
 #include <iomanip>
+#include <climits>
 
 int main() {
     
@@ -119,15 +120,22 @@ int main() {
                 break;
             }
             case 's': 
-            case 'S':
-                std::cout << "s" << std::endl;
+            case 'S':{
                 // case s or S - smallest
-                // if list != empty then do the logic
-                // either use conditional operator to get smaller number while iterating range-base for loop
-                    // or use predefined method 
-                // Display the smallest number
-                // else display the message
+                if (!list.empty()){
+                    int smallest {INT_MAX};
+                    int index {};
+                    int i {};
+                    for (auto element: list){
+                        index = (element < smallest)?i:index; // if element is smaller then assign new index else keep the old one
+                        smallest = (element < smallest)?element:smallest;
+                        ++i;
+                    }
+                    std::cout << smallest << " at [" << index << "]" << std::endl;
+                } else
+                    std::cout << "Unable to determine the smallest number - list is empty" << std::endl;
                 break;
+            }
             case 'l': 
             case 'L':
                 std::cout << "l" << std::endl;
