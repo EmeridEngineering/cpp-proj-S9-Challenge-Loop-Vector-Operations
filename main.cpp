@@ -116,9 +116,9 @@ int main() {
             case 's': 
             case 'S':{
                 // case s or S - smallest
-                int smallest {INT_MAX};
-                int index {};
                 if (!list.empty()){
+                    int smallest {INT_MAX};
+                    int index {};
                     int i {};
                     for (auto element: list){
                         index = (element < smallest)?i:index; // if element is smaller then assign new index else keep the old one
