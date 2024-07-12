@@ -107,13 +107,12 @@ int main() {
             case 'm': 
             case 'M':{
                 // case m or M - mean
-                double running_sum {}, mean{};
                 if (!list.empty()){
+                    int running_sum {};
                     for (auto element: list)
                         running_sum += element;
-                    mean = running_sum / list.size(); // (double) / (int) = (double)
                     // std::cout << std::fixed << std::setprecision(2); //Optional to set the precion of the output
-                    std::cout << mean << std::endl;
+                    std::cout << static_cast<double>(running_sum) / list.size() << std::endl; // (double) / (int) = (double)
                 } else
                     std::cout << "Unable to calculate the mean - no data" << std::endl;
                 break;
