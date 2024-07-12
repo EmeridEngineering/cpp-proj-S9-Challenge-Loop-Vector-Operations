@@ -85,7 +85,7 @@ int main() {
             case 'p': //intentional to achieve p OR P
             case 'P':
                 // case p or P - print
-                if (list.empty() != true){
+                if (!list.empty()){
                     std::cout << "[ ";
                     for (auto element: list)
                         std::cout << element << " ";
