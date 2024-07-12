@@ -64,6 +64,7 @@ Good luck!
 */
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 int main() {
     
@@ -126,7 +127,9 @@ int main() {
             case 'L':
                 // case l or L - largest
                 if (!list.empty()){
-                    std::cout << "l" << std::endl;
+                    std::vector<int>::iterator largest {std::max_element(list.begin(), list.end())};
+                    long long int index {std::distance(list.begin(), largest)};
+                    std::cout << *largest << " at index [" << index << "]" << std::endl;
                 } else
                     std::cout << "Unable to determine the largest number - list is empty" << std::endl;
                 break;
