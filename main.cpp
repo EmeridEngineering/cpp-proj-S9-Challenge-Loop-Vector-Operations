@@ -118,9 +118,11 @@ int main() {
             case 'S':{
                 // case s or S - smallest (using predefined algorithms in <algorithm>)
                 std::vector<int>::iterator smallest {}; //the return value of std::min_element needs apropriate container
+                int index {};
                 if (!list.empty()){
                     smallest = std::min_element(list.begin(), list.end());
-                    std::cout << *smallest << std::endl;
+                    index = std::distance(list.begin(), smallest); //returns the index of the smallest element
+                    std::cout << *smallest << " at index [" << index << "]" << std::endl;
                 } else
                     std::cout << "Unable to determine the smallest number - list is empty" << std::endl;
                 break;
