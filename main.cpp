@@ -138,9 +138,15 @@ int main() {
             }
             case 'l': 
             case 'L':
-                std::cout << "l" << std::endl;
                 // case l or L - largest
-                // Similar to above
+                if (!list.empty()){
+                    int largest {};
+                    for (auto element: list){
+                        largest = (element > largest)?element:largest;
+                    }
+                    std::cout << largest << std::endl;
+                } else
+                    std::cout << "Unable to determine the largest number - list is empty" << std::endl;
                 break;
             case 'q': 
             case 'Q':
