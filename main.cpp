@@ -150,9 +150,8 @@ int main() {
                 break;
             case 'q': 
             case 'Q':
-                std::cout << "q" << std::endl;
                 // case q or Q - quit
-                // display message
+                std::cout << "Goodbye" << std::endl;
                 break;
             default:
                 std::cout << "Unknown selection, please try again" << std::endl;
